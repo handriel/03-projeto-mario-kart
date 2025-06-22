@@ -72,6 +72,19 @@ async function logRollResult(characterName, roll, block, skillValue) {
     console.log(`   ${characterName} rolou 🎲${roll} no dado de ${block}: 🎲${roll} + 🔋${skillValue} = ${roll + skillValue}`);   
 }
 
+async function declareWinner(character1, character2) {
+    console.log(`\n🏁🏆 Fim da corrida! Resultados finais:`);
+    console.log(`   ${character1.NOME}: ${character1.PONTOS} ponto(s)`);
+    console.log(`   ${character2.NOME}: ${character2.PONTOS} ponto(s)`);
+    if (character1.PONTOS > character2.PONTOS) {
+        console.log(`🏁🏆 ${character1.NOME} é o grande vencedor com ${character1.PONTOS} pontos!`);
+    } else if (character2.PONTOS > character1.PONTOS) {
+        console.log(`🏁🏆 ${character2.NOME} é o grande vencedor com ${character2.PONTOS} pontos!`);
+    } else {
+        console.log('🏁🤝 Empate! Ambos os jogadores terminaram com a mesma pontuação.');
+    }
+}
+
 async function playRaceEngine(character1, character2) {
     for (let round = 1; round <= 5; round++) {
         console.log(`\n🔄 Rodada ${round}:`);
@@ -129,6 +142,9 @@ async function playRaceEngine(character1, character2) {
             console.log(`   🏆 ${character2.NOME} venceu a rodada!`);
         }
     }
+    await declareWinner(character1, character2);
+    player1.PONTOS = 0; // Reset points for next round
+    player2.PONTOS = 0; // Reset points for next round
 }
 
 (async function main() {

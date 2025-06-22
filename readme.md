@@ -1,4 +1,10 @@
-<h1>Desafio de projeto do Felipão: Mario Kart.JS</h1>
+<h1> Handriel Scheffer (handriel@me.com)</h1>
+<h1> Data: 22/jun/2025</h1>
+---
+</br>
+
+<h2>Baseado no desafio de projeto do Felipão: Mario Kart.JS</h2>
+<h2>https://github.com/digitalinnovationone/formacao-nodejs/tree/main/03-projeto-mario-kart</h2>
 
   <table>
         <tr>

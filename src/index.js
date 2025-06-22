@@ -102,6 +102,22 @@ async function playRaceEngine(character1, character2) {
         if (block === 'CONFRONTO') {
             let powerResult1 = player1.PODER + roll1;
             let powerResult2 = player2.PODER + roll2;
+            console.log(`   ${character1.NOME} confrontou com ${character2.NOME}`);
+            await logRollResult(player1.NOME, roll1, 'poder', player1.PODER);
+            await logRollResult(player2.NOME, roll2, 'poder', player2.PODER);
+
+            if (powerResult1 > powerResult2 && player2.PONTOS > 0) {
+                console.log(`   🥊 ${character1.NOME} venceu o confronto! ${character2.NOME} perdeu 1 ponto 🐢`);
+                player2.PONTOS -= 1;
+            }
+            
+            if (powerResult2 > powerResult1 && player1.PONTOS > 0) {
+                console.log(`   🥊 ${character2.NOME} venceu o confronto! ${character1.NOME} perdeu 1 ponto 🐢`);
+                player1.PONTOS -= 1;
+            }
+            
+            console.log(powerResult1 === powerResult2 ? `   🥊 Jogadores empataram!`: '');       
+
         }
 
         if (totalSkillCheck1 > totalSkillCheck2) {

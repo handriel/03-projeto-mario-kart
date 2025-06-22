@@ -100,6 +100,17 @@ async function playRaceEngine(character1, character2) {
         }
 
         if (block === 'CONFRONTO') {
+            let powerResult1 = player1.PODER + roll1;
+            let powerResult2 = player2.PODER + roll2;
+        }
+
+        if (totalSkillCheck1 > totalSkillCheck2) {
+            character1.PONTOS += 1;
+            console.log(`   🏆 ${character1.NOME} venceu a rodada!`);
+        }
+        else if (totalSkillCheck2 > totalSkillCheck1) {
+            character2.PONTOS += 1;
+            console.log(`   🏆 ${character2.NOME} venceu a rodada!`);
         }
     }
 }

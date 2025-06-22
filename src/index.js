@@ -52,4 +52,5 @@ async function rollDice() {
 
 (async function main() {
     console.log('Iniciando o jogo de Mario Kart...');
+    console.log( `🏁🚨 Corrida entre ${player1.NOME} e ${player2.NOME} iniciando...\n`);
 })();

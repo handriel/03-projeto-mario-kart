@@ -3,7 +3,7 @@
 ---
 </br>
 
-<h2>Baseado no desafio de projeto do Felipão: Mario Kart.JS</h2>
+<h2>Baseado no desafio de projeto do Felipe Aguiar: Mario Kart.JS</h2>
 <h2>https://github.com/digitalinnovationone/formacao-nodejs/tree/main/03-projeto-mario-kart</h2>
 
   <table>
